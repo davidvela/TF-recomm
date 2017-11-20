@@ -1,5 +1,37 @@
 # TF-recomm
 
+small version:
+1. run docker: docker run --name runtfrecomm -p 81:81 -i -t davidvela/tfrecomm bash
+2. train the model: Python svd_train_val.py
+3. open telnet session: telnet localhost 81
+4. Type and number between 1 and about 5000 and you should get recommendations back.
+
+GPU version: 
+docker run --name runtfrecommgpu -p 81:81 -i -t davidvela/tfrecommgpu bash
+
+# TASK: 
+This model is trained from the set of data from movielens.  The model only uses the ratings.dat  file to train the model.  However there are two other files, movies.dat and users.dat.  The challenge is to write a python program that will interrogate the  model and allow you to get an idea of how accurate the model is. To do this you will need to use the movies and users file.
+
+## The Movies file:
+See http://files.grouplens.org/datasets/movielens/ml-1m-README.txt <BR>
+Format-- MovieID::Title::Genres
+
+## Genres are a list with | delimitors.
+Users file: http://files.grouplens.org/datasets/movielens/ml-1m-README.txt <BR>
+Format-- UserID::Gender::Age::Occupation::Zip-code
+
+See the readme file for details of the Age and Occupation field.
+
+## What to do
+users with similar gender, age and occupation and possibly zip code.  
+Check users with same zip code - similar tastes ... 
+extend movies file wit age ratings ... comparison of returned movies. 
+
+Report of the results + appendix code - 10p. 
+
+
+
+# Intro 
 This version is packaged into a dockerfile
 Notes:
 master branch is set to CPU and uses the small file as  training set
