@@ -1,7 +1,7 @@
 # TF-recomm
 
 small version:
-1. run docker: docker run --name runtfrecomm -p 81:81 -i -t davidvela/tfrecomm bash
+1. run docker: docker run --name runtfrecomm -p 81:81 -i -t ./TF-recomm bash
 2. train the model: Python svd_train_val.py
 3. open telnet session: telnet localhost 81
 4. Type and number between 1 and about 5000 and you should get recommendations back.
