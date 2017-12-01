@@ -7,16 +7,11 @@ Format-- MovieID::Title::Genres
 ## Genres are a list with | delimitors.
 Users file: http://files.grouplens.org/datasets/movielens/ml-1m-README.txt <BR>
 Format-- UserID::Gender::Age::Occupation::Zip-code
-
 See the readme file for details of the Age and Occupation field.
 
 ## What to do
-users with similar gender, age and occupation and possibly zip code.  
-Check users with same zip code - similar tastes ... 
-extend movies file wit age ratings ... comparison of returned movies. 
-
-Report of the results + appendix code - 10p. 
-
+* Expand the model using the users file
+* Check the model 
 
 
 # Intro 
